@@ -531,3 +531,126 @@ img{
 .frame-btn {
     fill: #FFF;
 }
+
+.backdrop{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top:0;
+    left: 0;
+    z-index: 999;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0, 0, 0, 0.3);
+
+}
+.backdrop.is-hidden{
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+
+.modal {
+    position: relative;
+    border-radius: 4px;
+    background-color:  #FCFCFC;
+    width: 408px;
+    min-height: 584px;
+
+    padding: 24px;
+    padding-top: 72px;
+}
+.modal-btn-close {
+    position: absolute;
+    top: 24px;
+    right: 24px;
+
+    width: 24px;
+    height: 24px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E7E9FC;
+    border-radius: 50%;
+    border-color: rgba(0, 0, 0, 0.10);
+}
+.close-modal {
+}
+.modal-caption {
+
+    color: #2E2F42;
+    text-align: center;
+
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.5; /* 150% */
+    letter-spacing: 0.32px;
+    width: 360px;
+    padding-bottom: 16px;
+}
+
+
+.modal-form {
+}
+.field{
+    position: relative;
+    
+}
+.form-label {
+    display: block;
+    margin-bottom: 4px;
+    color:  #8E8F99;
+
+    font-size: 12px;
+    line-height: 1.16;
+    letter-spacing: 0.48px;
+}
+.form-input {
+    width: 100%;
+    height: 40px;
+    border-radius: 4px;
+    border: 1px solid  rgba(46, 47, 66, 0.40);
+    padding: 8px 16px;
+    padding-left: 38px;
+    outline: none;
+}
+.form-input:focus{
+        border: 1px solid  #4D5AE5;
+}
+.modal-icons{
+    position: absolute;
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    fill:#2E2F42;
+}
+.form-input:focus + .modal-icons {
+    fill: #4D5AE5;
+}
+
+
+.modal-txt {
+    color: #8E8F99;
+    font-size: 12px;
+    line-height: 14px; /* 116.667% */
+    letter-spacing: 0.48px;
+    }
+
+.privacy{
+    color:  #4D5AE5;
+    text-decoration-line: underline;
+    }
+.modal-btn {
+    color:  #FFF;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 24px; /* 150% */
+    letter-spacing: 0.64px;
+    padding: 16px 32px;
+    border-radius: 4px;
+    background:  #4D5AE5;
+    box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
+    }
