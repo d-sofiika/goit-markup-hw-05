@@ -502,7 +502,10 @@ img{
 .form-subscribe-input {
     width: 264px;
     height: 40px;
-    flex-shrink: 0;
+    font-size: 12px;
+    line-height: 2;
+    letter-spacing: 0.04em;
+    color: #FFFFF;
     border-radius: 4px;
     border: 1px solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -511,13 +514,14 @@ img{
     padding: 8px 16px;
 }
 .form-subscribe-input::placeholder{
-    color: #FFF;
+    color: #FFFFF;
 }
 
 .footer-modal-btn {
     display: flex;
     justify-content: center;
     align-items: center;
+    min-width: 165px;
     gap: 16px;
     padding: 8px 24px;
     color: #FFF;
@@ -527,7 +531,7 @@ img{
     line-height: 1.5; 
     letter-spacing: 0.64px;
     background-color:#4D5AE5;
-    transition: background-color 300ms ease-in ;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
    
 }
 .footer-modal-btn:hover, .footer-modal-btn:focus {
@@ -535,6 +539,7 @@ img{
 }
 .frame-btn {
     fill: #FFF;
+    
 }
 
 /* Backdrop */
@@ -549,8 +554,8 @@ img{
     z-index: 999;
     width: 100vw;
     height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
-
+    background-color:rgba(46, 47, 66, 0.4);
+    transition:  opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .backdrop.is-open{
     opacity: 0;
@@ -560,6 +565,7 @@ img{
 
 
 .modal {
+  
     position: relative;
     border-radius: 4px;
     background-color:  #FCFCFC;
@@ -568,12 +574,16 @@ img{
 
     padding: 24px;
     padding-top: 72px;
+    box-shadow:0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 .modal-btn-close {
     position: absolute;
     top: 24px;
     right: 24px;
 
+    padding: 0;
     width: 24px;
     height: 24px;
     display: flex;
@@ -582,18 +592,18 @@ img{
     background-color: #E7E9FC;
     border-radius: 50%;
     border:1px solid rgba(0, 0, 0, 0.10);
-    transition: background-color 300ms ease-in ;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
 .modal-btn-close:focus,
 .modal-btn-close:hover{
     background-color: #404BBF;
+    border: none;
 }
 .close-modal{
     fill: #2E2F42;
-    transition: fill 300ms ease-in ;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.modal-btn-close .close-modal:focus,
-.modal-btn-close .close-modal:hover{
+.modal-btn-close .close-modal:focus,.modal-btn-close .close-modal:hover{
     fill: #FFFFFF;
 }
 .modal-caption {
@@ -606,7 +616,7 @@ img{
     line-height: 1.5;
     letter-spacing: 0.32px;
     width: 360px;
-    padding-bottom: 16px;
+    margin-bottom: 16px;
 }
 
 /* Form */
@@ -617,7 +627,7 @@ img{
     
 }
 .form-wrapper{
-    margin-bottom: 8px;
+    margin-bottom: 16px;
 }
 .form-label {
     display: block;
@@ -625,8 +635,8 @@ img{
     color:  #8E8F99;
 
     font-size: 12px;
-    line-height: 1.16;
-    letter-spacing: 0.48px;
+    line-height: 1.17;
+    letter-spacing: 0.04em;
 }
 .form-input {
     width: 100%;
@@ -635,12 +645,12 @@ img{
     border: 1px solid  rgba(46, 47, 66, 0.40);
     padding: 8px 16px;
     padding-left: 38px;
-    outline: none;
+    outline: transparent;
     background-color: transparent;
-    transition: border 300ms ease-in ;
+    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus{
-        border: 1px solid  #4D5AE5;
+    border-color: #4D5AE5;
 }
 .modal-icons{
     position: absolute;
@@ -648,7 +658,7 @@ img{
     left: 16px;
     transform: translateY(-50%);
     fill:#2E2F42;
-    transition: fill 300ms ease-in ;
+    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus + .modal-icons {
     fill: #4D5AE5;
@@ -659,15 +669,19 @@ img{
     resize: none;
     height: 120px;
     border-radius: 4px;
-    border: 1px solid  rgba(46, 47, 66, 0.40);
+    border: 1px solid rgba(46, 47, 66, 0.40);
     background-color: transparent;
     padding: 8px 16px;
-    outline: none;
-    transition: bborder 300ms ease-in ;
+    font-style: 12px;
+    line-height: 1.17; 
+    letter-spacing: 0.04em;
+    color: rgba(46, 47, 66, 0.4);
+    outline: transparent;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .form-message:focus{
-    border: 1px solid #4D5AE5;
+    border-color: #4D5AE5;
 }
 .form-message::placeholder{
     color: rgba(46, 47, 66, 0.40);
@@ -679,8 +693,8 @@ img{
     margin-bottom: 24px;
     color: #8E8F99;
     font-size: 12px;
-    line-height: 1.16; 
-    letter-spacing: 0.48px;
+    line-height: 1.17; 
+    letter-spacing: 0.04em;
     user-select: none;
 }
 .agreement-checkbox.visually-hidden {
@@ -697,7 +711,7 @@ img{
     border-radius: 2px;
     cursor: pointer;
     fill: transparent;
-    transition: border-color 300ms ease, background-color 300ms ease;
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agreement-checkbox:checked + .form-agreement-checkbox{
  background-color:  #404BBF;
@@ -709,7 +723,7 @@ img{
 }
 .form-agreement-icon {
     fill: #F4F4FD;
-    transition: opasity 300ms easy;
+    transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .agreement-link{
     color:  #4D5AE5;
@@ -717,6 +731,7 @@ img{
 }
 
 .modal-btn {
+    display: block;
     transform:translateX(50%);
     min-width: 169px;
     min-height: 56px;
@@ -731,7 +746,7 @@ img{
     border-radius: 4px;
     background-color:  #4D5AE5;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
-    transition: background-color 300ms ease-in ;
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .modal-btn:hover, .modal-btn:focus{
     background-color:#404BBF ;
