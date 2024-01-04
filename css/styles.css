@@ -499,13 +499,13 @@ img{
 .form-subscribe-field {
     
 }
-.form-subscribe-input{
+.form-subscribe-input {
     width: 264px;
     height: 40px;
     font-size: 12px;
     line-height: 2;
     letter-spacing: 0.04em;
-    color: #FFFFF;
+    color: #FFFFFF;
     border-radius: 4px;
     border: 1px solid #FFF;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
@@ -514,7 +514,7 @@ img{
     padding: 8px 16px;
 }
 .form-subscribe-input::placeholder{
-    color: #FFFFF;
+    color: #FFFFFF;
 }
 
 .footer-modal-btn {
@@ -538,6 +538,7 @@ img{
     background-color:#404BBF;
 }
 .frame-btn {
+    margin-left: 16px;
     fill: #FFF;
     
 }
@@ -549,6 +550,7 @@ img{
     align-items: center;
     justify-content: center;
     position: fixed;
+    
     top:0;
     left: 0;
     z-index: 999;
@@ -561,12 +563,15 @@ img{
     opacity: 0;
     visibility: hidden;
     pointer-events: none;
+    
 }
 
 
 .modal {
-  
-    position: relative;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(1);
     border-radius: 4px;
     background-color:  #FCFCFC;
     width: 408px;
@@ -582,7 +587,8 @@ img{
     position: absolute;
     top: 24px;
     right: 24px;
-
+    margin-left: auto;
+    margin-bottom: 24px;
     padding: 0;
     width: 24px;
     height: 24px;
@@ -594,8 +600,7 @@ img{
     border:1px solid rgba(0, 0, 0, 0.10);
     transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1); 
 }
-.modal-btn-close:focus,
-.modal-btn-close:hover{
+.modal-btn-close:focus,.modal-btn-close:hover{
     background-color: #404BBF;
     border: none;
 }
@@ -627,7 +632,7 @@ img{
     
 }
 .form-wrapper{
-    margin-bottom: 16px;
+    margin-bottom: 8px;
 }
 .form-label {
     display: block;
@@ -647,7 +652,7 @@ img{
     padding-left: 38px;
     outline: transparent;
     background-color: transparent;
-    transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .form-input:focus{
     border-color: #4D5AE5;
@@ -668,11 +673,11 @@ img{
     width: 100%;
     resize: none;
     height: 120px;
+    font-size: 12px;
     border-radius: 4px;
     border: 1px solid rgba(46, 47, 66, 0.40);
     background-color: transparent;
     padding: 8px 16px;
-    font-style: 12px;
     line-height: 1.17; 
     letter-spacing: 0.04em;
     color: rgba(46, 47, 66, 0.4);
@@ -697,7 +702,7 @@ img{
     letter-spacing: 0.04em;
     user-select: none;
 }
-.agreement-checkbox.visually-hidden {
+.agreement-checkbox {
     overflow: hidden;
 }
 .form-agreement-checkbox{
@@ -711,16 +716,19 @@ img{
     border-radius: 2px;
     cursor: pointer;
     fill: transparent;
-    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
-.agreement-checkbox:checked + .form-agreement-checkbox{
- background-color:  #404BBF;
- border: none;
- fill: #F4F4FD;
-}
-.agreement-checkbox:checked + .form-agreement > .form-agreement-checkbox{
+
+.agreement-checkbox:checked + .form-agreement > .form-agreement-checkbox > .form-agreement-icon{
     opacity: 1;
 }
+
+.agreement-checkbox:checked + .form-agreement > .form-agreement-checkbox{
+    background-color:  #404BBF;
+    border: none;
+    fill: #F4F4FD;
+}
+
 .form-agreement-icon {
     fill: #F4F4FD;
     transition: opasity 250ms cubic-bezier(0.4, 0, 0.2, 1);
